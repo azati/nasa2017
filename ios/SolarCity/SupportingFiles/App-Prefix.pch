@@ -1,0 +1,21 @@
+//
+//  App-Prefix.pch
+//  App
+//
+//  Created by Denis Vashkovski on 29/04/17.
+//  Copyright © 2017 itibo. All rights reserved.
+//
+
+#ifndef App_Prefix_pch
+#define App_Prefix_pch
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <DVAppCore.h>
+
+#import <UIAlertController+Blocks/UIAlertController+Blocks.h>
+
+#import "DesignHelper.h"
+#import "SCConstants.h"
+
+#endif /* App_Prefix_pch */

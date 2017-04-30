@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  SolarCity
+
+  Created by Denis Vashkovski on 29/04/17.
+  Copyright © 2017 itibo. All rights reserved.
+*/
+
+"GLOBAL_KWH_ANNUM" = "kWh/annum";
+
+// SCMainVC
+"MVC_SOLAR_CITY" = "SOLAR CITY";
+"MVC_TEXT" = "SolarCity project uses neural networks for satellite images processing to find roofs suitable for solar panel installation within a selected neighborhood, town or a city. By estimating the effective roofs surface area, our software calculates solar system parameters: energy production by month, number of roofs, roof total surface area, solar panel total surface area, average energy production per roof.";
+"MCV_WRITE_LOCATION_HERE" = "Write location here";
+"MVC_GO" = "Go!";
+
+// SCMapPanelLeftVC
+"MPLVC_BACK" = "Back";
+"MPLVC_SOLAR_CITY" = "SOLAR CITY";
+"MPLVC_TOTAL_AREA" = "Total area";
+"MPLVC_ENERGY_PRODUCTION_TITLE" = "Energy production\nper year";
+"MPLVC_VIEW_CALENDAR" = "VIEW CALENDAR";
+
+// SCCalendarVC
+"CVC_TOP_TITLE" = "Energy Production by month";

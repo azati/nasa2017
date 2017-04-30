@@ -1,0 +1,12 @@
+platform :ios, '8.0'
+
+target 'SolarCity' do
+	pod 'DVAppCore', :git => 'https://github.com/denis-vashkovski/DVAppCore.git'
+    
+    pod 'UIAlertController+Blocks', '~>0.9'
+    pod 'GoogleMaps', '~>2.2'
+end
+
+target 'SolarCityTests' do
+
+end

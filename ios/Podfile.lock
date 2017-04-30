@@ -1,0 +1,81 @@
+PODS:
+  - DVAppCore (0.5.4):
+    - DVAppCore/Categories (= 0.5.4)
+    - DVAppCore/Controllers (= 0.5.4)
+    - DVAppCore/Helpers (= 0.5.4)
+    - DVAppCore/Models (= 0.5.4)
+    - DVAppCore/Templates (= 0.5.4)
+    - DVAppCore/Views (= 0.5.4)
+  - DVAppCore/Categories (0.5.4):
+    - DVAppCore/Categories/NS (= 0.5.4)
+    - DVAppCore/Categories/UI (= 0.5.4)
+  - DVAppCore/Categories/NS (0.5.4)
+  - DVAppCore/Categories/UI (0.5.4)
+  - DVAppCore/Controllers (0.5.4):
+    - DVAppCore/Categories
+  - DVAppCore/Helpers (0.5.4):
+    - DVAppCore/Helpers/Contacts (= 0.5.4)
+    - DVAppCore/Helpers/DataKeeper (= 0.5.4)
+    - DVAppCore/Helpers/Design (= 0.5.4)
+    - DVAppCore/Helpers/ImagePicker (= 0.5.4)
+    - DVAppCore/Helpers/Localization (= 0.5.4)
+    - DVAppCore/Helpers/Location (= 0.5.4)
+    - DVAppCore/Helpers/Logging (= 0.5.4)
+    - DVAppCore/Helpers/Operation (= 0.5.4)
+    - DVAppCore/Helpers/Router (= 0.5.4)
+    - DVAppCore/Helpers/URLConnection (= 0.5.4)
+    - DVAppCore/Models
+  - DVAppCore/Helpers/Contacts (0.5.4):
+    - DVAppCore/Models
+  - DVAppCore/Helpers/DataKeeper (0.5.4):
+    - DVAppCore/Models
+  - DVAppCore/Helpers/Design (0.5.4):
+    - DVAppCore/Models
+  - DVAppCore/Helpers/ImagePicker (0.5.4):
+    - DVAppCore/Models
+  - DVAppCore/Helpers/Localization (0.5.4):
+    - DVAppCore/Models
+  - DVAppCore/Helpers/Location (0.5.4):
+    - DVAppCore/Models
+  - DVAppCore/Helpers/Logging (0.5.4):
+    - DVAppCore/Models
+  - DVAppCore/Helpers/Operation (0.5.4):
+    - DVAppCore/Models
+  - DVAppCore/Helpers/Router (0.5.4):
+    - DVAppCore/Models
+  - DVAppCore/Helpers/URLConnection (0.5.4):
+    - DVAppCore/Models
+  - DVAppCore/Models (0.5.4):
+    - DVAppCore/Categories
+  - DVAppCore/Templates (0.5.4):
+    - DVAppCore/Helpers
+  - DVAppCore/Views (0.5.4)
+  - GoogleMaps (2.2.0):
+    - GoogleMaps/Maps (= 2.2.0)
+  - GoogleMaps/Base (2.2.0)
+  - GoogleMaps/Maps (2.2.0):
+    - GoogleMaps/Base
+  - UIAlertController+Blocks (0.9.2)
+
+DEPENDENCIES:
+  - DVAppCore (from `https://github.com/denis-vashkovski/DVAppCore.git`)
+  - GoogleMaps (~> 2.2)
+  - UIAlertController+Blocks (~> 0.9)
+
+EXTERNAL SOURCES:
+  DVAppCore:
+    :git: https://github.com/denis-vashkovski/DVAppCore.git
+
+CHECKOUT OPTIONS:
+  DVAppCore:
+    :commit: 93ab517f97ed40c9d5e68a0faee189acd3ece5be
+    :git: https://github.com/denis-vashkovski/DVAppCore.git
+
+SPEC CHECKSUMS:
+  DVAppCore: 36cfe90709b1a82afcaa20631a4fd68d9e286c81
+  GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
+  UIAlertController+Blocks: 80e28b92523fb58aba4d1bccec013d5a0b0bddb2
+
+PODFILE CHECKSUM: 28954ec1fb15ce960570eb008fe5658b2980d1aa
+
+COCOAPODS: 1.2.0.beta.1

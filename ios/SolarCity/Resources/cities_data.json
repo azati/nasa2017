@@ -1,0 +1,64 @@
+[{
+ "id": 0,
+ "name": "Grodno",
+ "centroid": [53.678815, 23.833809],
+ "coord": "53°40′N 23°50′E",
+ "total_area": "142.11 km2 (54.87 sq mi)",
+ "total_energy_per_year": {
+ "value": 228.9416837234397,
+ "units": "GWh/annum",
+ "formatter": "%.3f"
+ },
+ "details": [{
+             "title": "Total roofs",
+             "values": [{
+                        "value": 26172,
+                        "formatter": "%.0f"
+                        }]
+             },
+             {
+             "title": "Suitable roofs",
+             "values": [{
+                        "value": 4197,
+                        "formatter": "%.0f"
+                        }]
+             },
+             {
+             "title": "Roof suitable surface area",
+             "values": [{
+                        "value": 4775132.196363,
+                        "units": "m2",
+                        "formatter": "%.3f"
+                        },
+                        {
+                        "value": 51399045.448431,
+                        "units": "ft2",
+                        "formatter": "%.1f"
+                        }
+                        ]
+             },
+             {
+             "title": "Solar panel total surface area",
+             "values": [{
+                        "value": 3581349.147272,
+                        "units": "m2",
+                        "formatter": "%.3f"
+                        },
+                        {
+                        "value": 38549284.086324,
+                        "units": "tf2",
+                        "formatter": "%.1f"
+                        }
+                        ]
+             }
+             ],
+"months_info": [{"formatter": "%.3f", "units": "GWh/month", "value": 5.05399991663058}, {"formatter": "%.3f", "units": "GWh/month", "value": 9.665774840555985}, {"formatter": "%.3f", "units": "GWh/month", "value": 16.55184972696515}, {"formatter": "%.3f", "units": "GWh/month", "value": 23.37474961441643}, {"formatter": "%.3f", "units": "GWh/month", "value": 31.461149481025366}, {"formatter": "%.3f", "units": "GWh/month", "value": 30.955749489362297}, {"formatter": "%.3f", "units": "GWh/month", "value": 30.00812450499407}, {"formatter": "%.3f", "units": "GWh/month", "value": 27.354774548763015}, {"formatter": "%.3f", "units": "GWh/month", "value": 17.81534970612279}, {"formatter": "%.3f", "units": "GWh/month", "value": 9.981649835345394}, {"formatter": "%.3f", "units": "GWh/month", "value": 4.864474919756934}, {"formatter": "%.3f", "units": "GWh/month", "value": 3.853674936430817}]
+ },
+ {
+ "id": 1,
+ "name": "Brest",
+ "centroid": [52.097120, 23.727827],
+ "coord": "",
+ "total_area": ""
+ }
+ ]
