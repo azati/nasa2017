@@ -36,7 +36,7 @@
 + (instancetype)showForVC:(UIViewController *)parentVC data:(NSArray<SCValue *> *)data {
     UIView *viewContainer = [[UIView alloc] initWithFrame:CGRectMake(.0, .0, AC_SCREEN_WIDTH, AC_SCREEN_HEIGHT)];
     [viewContainer setBackgroundColor:ACColorHexA(@"000000", .5)];
-    [viewContainer setAlpha:1.];
+    [viewContainer setAlpha:.0];
     [parentVC.view addSubview:viewContainer];
     
     SCCalendarVC *calendarVC = [self ac_newInstance];
@@ -53,7 +53,10 @@
                                                                         VERTICAL_PADDING,
                                                                         HORIZONTAL_PADDING)];
     
-    [viewContainer ac_setHidden:NO animate:YES];
+//    [viewContainer ac_setHidden:NO animate:YES];
+    [UIView animateWithDuration:.2 animations:^{
+        [viewContainer setAlpha:1.];
+    }];
     
     return calendarVC;
 }

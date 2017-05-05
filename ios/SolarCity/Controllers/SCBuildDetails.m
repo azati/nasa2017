@@ -45,13 +45,20 @@
     
     [buildDataView ac_addConstraintsEqualSuperview];
     
-    [parentView ac_setHidden:NO animate:YES];
+//    [parentView ac_setHidden:NO animate:YES];
+    [UIView animateWithDuration:.2 animations:^{
+        [parentView setAlpha:1.];
+    }];
     
     return buildDetails;
 }
 
 - (void)hide {
-    [self.parentView ac_setHidden:YES animate:YES];
+    [UIView animateWithDuration:.3 animations:^{
+        [self.parentView setAlpha:.0];
+    } completion:^(BOOL finished) {
+        [self.parentView removeFromSuperview];
+    }];
 }
 
 - (void)viewDidLoad {

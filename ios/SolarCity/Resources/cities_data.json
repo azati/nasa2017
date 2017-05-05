@@ -52,13 +52,17 @@
                         ]
              }
              ],
-"months_info": [{"formatter": "%.3f", "units": "GWh/month", "value": 5.05399991663058}, {"formatter": "%.3f", "units": "GWh/month", "value": 9.665774840555985}, {"formatter": "%.3f", "units": "GWh/month", "value": 16.55184972696515}, {"formatter": "%.3f", "units": "GWh/month", "value": 23.37474961441643}, {"formatter": "%.3f", "units": "GWh/month", "value": 31.461149481025366}, {"formatter": "%.3f", "units": "GWh/month", "value": 30.955749489362297}, {"formatter": "%.3f", "units": "GWh/month", "value": 30.00812450499407}, {"formatter": "%.3f", "units": "GWh/month", "value": 27.354774548763015}, {"formatter": "%.3f", "units": "GWh/month", "value": 17.81534970612279}, {"formatter": "%.3f", "units": "GWh/month", "value": 9.981649835345394}, {"formatter": "%.3f", "units": "GWh/month", "value": 4.864474919756934}, {"formatter": "%.3f", "units": "GWh/month", "value": 3.853674936430817}]
- },
- {
- "id": 1,
- "name": "Brest",
- "centroid": [52.097120, 23.727827],
- "coord": "",
- "total_area": ""
+ "months_info": [{"formatter": "%.3f", "units": "GWh/month", "value": 5.05399991663058},
+                 {"formatter": "%.3f", "units": "GWh/month", "value": 9.665774840555985},
+                 {"formatter": "%.3f", "units": "GWh/month", "value": 16.55184972696515},
+                 {"formatter": "%.3f", "units": "GWh/month", "value": 23.37474961441643},
+                 {"formatter": "%.3f", "units": "GWh/month", "value": 31.461149481025366},
+                 {"formatter": "%.3f", "units": "GWh/month", "value": 30.955749489362297},
+                 {"formatter": "%.3f", "units": "GWh/month", "value": 30.00812450499407},
+                 {"formatter": "%.3f", "units": "GWh/month", "value": 27.354774548763015},
+                 {"formatter": "%.3f", "units": "GWh/month", "value": 17.81534970612279},
+                 {"formatter": "%.3f", "units": "GWh/month", "value": 9.981649835345394},
+                 {"formatter": "%.3f", "units": "GWh/month", "value": 4.864474919756934},
+                 {"formatter": "%.3f", "units": "GWh/month", "value": 3.853674936430817}]
  }
  ]

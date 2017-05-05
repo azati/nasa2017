@@ -9,7 +9,8 @@
 #import "SCCity.h"
 
 @interface SCMapPanelView : UIView
-
 - (void)initWithCity:(SCCity *)city parentVC:(UIViewController *)parentVC;
 - (void)onMenuButtonTouch;
+
+- (BOOL)isMenuHidden;
 @end

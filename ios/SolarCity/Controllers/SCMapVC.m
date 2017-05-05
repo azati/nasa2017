@@ -53,7 +53,7 @@
     
     [self.mapView setDelegate:self];
     [self.mapView setMapType:kGMSTypeSatellite];
-    [self.mapView setMinZoom:ZOOM_DEFAULT maxZoom:ZOOM_DEFAULT];
+    [self.mapView setMinZoom:16. maxZoom:ZOOM_DEFAULT];
     
     self.viewPanelLeft.layer.shadowColor = ACColorHex(@"000000").CGColor;
     self.viewPanelLeft.layer.shadowOffset = CGSizeMake(16., .0);
@@ -64,24 +64,45 @@
     
     if (self.city) {
         [self ac_startLoadingProcess];
-        [[SCPolygonsHelper getInstance] loadPolygonsForCityId:self.city.uniqueId
-                                            completionHandler:
-         ^(NSArray<SCPolygon *> *polygons) {
-             dispatch_async(dispatch_get_main_queue(), ^{
-                 self.polygons = polygons;
-                 
-                 if (ACValidArray(self.polygons)) {
-                     GMSCameraPosition *newPosition = [GMSCameraPosition cameraWithLatitude:self.city.centroid.sc_latitude
-                                                                                  longitude:self.city.centroid.sc_longitude
-                                                                                       zoom:ZOOM_DEFAULT
-                                                                                    bearing:0.
-                                                                               viewingAngle:0.];
-                     [self.mapView animateToCameraPosition:newPosition];
-                 }
-                 
-                 [self ac_stopLoadingProcess];
-             });
-         }];
+        
+        [[NSOperationQueue new] addOperationWithBlock:^{
+            [NSThread sleepForTimeInterval:1.5];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.polygons = [SCPolygonsHelper getInstance].polygons;
+                
+                if (ACValidArray(self.polygons)) {
+                    GMSCameraPosition *newPosition = [GMSCameraPosition cameraWithLatitude:self.city.centroid.sc_latitude
+                                                                                 longitude:self.city.centroid.sc_longitude
+                                                                                      zoom:ZOOM_DEFAULT
+                                                                                   bearing:0.
+                                                                              viewingAngle:0.];
+                    [self.mapView animateToCameraPosition:newPosition];
+                }
+                
+                [self ac_stopLoadingProcess];
+            });
+        }];
+        
+#warning TODO uncomment it
+//        [[SCPolygonsHelper getInstance] loadPolygonsForCityId:self.city.uniqueId
+//                                            completionHandler:
+//         ^(NSArray<SCPolygon *> *polygons) {
+//             dispatch_async(dispatch_get_main_queue(), ^{
+//                 self.polygons = polygons;
+//                 
+//                 if (ACValidArray(self.polygons)) {
+//                     GMSCameraPosition *newPosition = [GMSCameraPosition cameraWithLatitude:self.city.centroid.sc_latitude
+//                                                                                  longitude:self.city.centroid.sc_longitude
+//                                                                                       zoom:ZOOM_DEFAULT
+//                                                                                    bearing:0.
+//                                                                               viewingAngle:0.];
+//                     [self.mapView animateToCameraPosition:newPosition];
+//                 }
+//
+//                 [self ac_stopLoadingProcess];
+//             });
+//         }];
     }
 }
 
@@ -89,27 +110,19 @@
 - (void)mapView:(GMSMapView *)mapView didTapOverlay:(GMSOverlay *)overlay {
     if (![overlay isKindOfClass:[SCGMSPolygon class]]) return;
     
-    SCPolygon *polygone = ((SCGMSPolygon *)overlay).polygon;
+    if (!self.viewPanelLeft.isMenuHidden) {
+        [self.viewPanelLeft onMenuButtonTouch];
+    }
     
-//    [UIAlertController showAlertInViewController:self
-//                                       withTitle:nil
-//                                         message:[NSString stringWithFormat:@"Index: %ld\nRoof area: %.3f\nType: %@\nName: %@\nisFlat: %@",
-//                                                  polygone.uniqueId,
-//                                                  polygone.roofArea,
-//                                                  polygone.type,
-//                                                  polygone.name,
-//                                                  (polygone.isFlat ? @"Yes" : @"No")]
-//                               cancelButtonTitle:@"OK"
-//                          destructiveButtonTitle:nil
-//                               otherButtonTitles:nil
-//                                        tapBlock:nil];
+    if (self.buildDetailsVC) {
+        [self.buildDetailsVC hide];
+    }
     
-//    [self.viewPanelLeft onMenuButtonTouch];
-    
-    UIView *parentView = [[UIView alloc] initWithFrame:CGRectMake(500.0, .0, 330., 410.)];
+    CGFloat viewWidth = 330.;
+    UIView *parentView = [[UIView alloc] initWithFrame:CGRectMake((AC_SCREEN_WIDTH - viewWidth), .0, viewWidth, 410.)];
     [self.view addSubview:parentView];
     
-    self.buildDetailsVC = [SCBuildDetails showForView:parentView data:polygone];
+    self.buildDetailsVC = [SCBuildDetails showForView:parentView data:((SCGMSPolygon *)overlay).polygon];
 }
 
 #define POLYGONS_DRAWING_OPERATION_NAME @"PolygonsDrawing"

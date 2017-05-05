@@ -38,8 +38,10 @@ ACSINGLETON_M
             [polygons addObject:[[SCPolygon alloc] initWithData:polygonData]];
         }
         
+        _polygons = ACValidArray(polygons) ? [NSArray arrayWithArray:polygons] : nil;
+        
         if (completionHandler) {
-            completionHandler(ACValidArray(polygons) ? [NSArray arrayWithArray:polygons] : nil);
+            completionHandler(_polygons);
         }
     }];
 }

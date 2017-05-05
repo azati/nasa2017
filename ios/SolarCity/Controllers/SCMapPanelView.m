@@ -41,6 +41,10 @@
     BOOL _hiden;
 }
 
+- (BOOL)isMenuHidden {
+    return _hiden;
+}
+
 - (void)initWithCity:(SCCity *)city parentVC:(UIViewController *)parentVC {
     self.city = city;
     self.parentVC = parentVC;
@@ -181,12 +185,12 @@
 }
 
 - (void)onMenuButtonTouch {
+    _hiden = !_hiden;
     self.constraintPanelLeftLeading.constant = _hiden ? -CGRectGetWidth(self.frame) : .0;
     
     [UIView animateWithDuration:AC_ANIMATION_DURATION_DEFAULT animations:^{
         [self layoutIfNeeded];
     } completion:^(BOOL finished) {
-        _hiden = !_hiden;
     }];
 }
 

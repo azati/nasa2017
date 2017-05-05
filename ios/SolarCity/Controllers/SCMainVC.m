@@ -9,6 +9,7 @@
 #import "SCMainVC.h"
 
 #import "SCCitiesHelper.h"
+#import "SCPolygonsHelper.h"
 
 #import "SCCitiesTVC.h"
 #import "SCMapVC.h"
@@ -75,6 +76,16 @@
     [self.buttonGo setBackgroundColor:ACColorHex(@"448aef")];
     [self.buttonGo.layer setCornerRadius:5.];
     [self.buttonGo addTarget:self action:@selector(onGoButtonTouch) forControlEvents:UIControlEventTouchUpInside];
+    
+#warning TODO correct it
+    [self ac_startLoadingProcess];
+    [[SCPolygonsHelper getInstance] loadPolygonsForCityId:[SCCitiesHelper getInstance].cities.firstObject.uniqueId
+                                        completionHandler:
+     ^(NSArray<SCPolygon *> *polygons) {
+         dispatch_async(dispatch_get_main_queue(), ^{
+             [self ac_stopLoadingProcess];
+         });
+     }];
 }
 
 - (void)didReceiveMemoryWarning {

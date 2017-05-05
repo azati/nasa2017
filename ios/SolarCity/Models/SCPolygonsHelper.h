@@ -11,5 +11,6 @@
 @interface SCPolygonsHelper : NSObject
 ACSINGLETON_H
 
+@property (nonatomic, strong, readonly) NSArray<SCPolygon *> *polygons;
 - (void)loadPolygonsForCityId:(long)cityId completionHandler:(void (^)(NSArray<SCPolygon *> *polygons))completionHandler;
 @end
