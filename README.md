@@ -42,4 +42,5 @@ Install [CocoaPods](http://cocoapods.org)
 
 Run `pod install` from Terminal, then open your app's `.xcworkspace` file to launch Xcode.
 
-Team https://azati.com 
+## Team 
+https://azati.com 
