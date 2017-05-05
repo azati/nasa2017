@@ -35,3 +35,9 @@ Run jupyter:
 Navigate http://localhost:8888 and open file all_buildings_prediction-resnet.ipynb
 
 Run all the cells in the notebook to perform roofs classification.
+
+## ios app
+
+Install [CocoaPods](http://cocoapods.org)
+
+Run `pod install` from Terminal, then open your app's `.xcworkspace` file to launch Xcode.
